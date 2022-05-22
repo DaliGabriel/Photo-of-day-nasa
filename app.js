@@ -1,7 +1,6 @@
 const userAction = async () => {
     const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=GZDrXLQhN96rrD5lTopVQMhgJ61ekWfQRSchiIxV');
     const myJson = await response.json(); //extract JSON from the http response
-    console.log(myJson);
 
     document.querySelector("#root").innerHTML += `<h1 class="title">${myJson.title}</h1>`
     document.querySelector("#root").innerHTML += `<h2 class="date">${myJson.date}</h2>`
